@@ -1,0 +1,585 @@
+/* 🔥 MASTER STYLESHEET - DRIVING SCHOOL 
+   Updated for: Better CTA, Mobile UX, and Professional Alignment
+*/
+
+/* --- 1. GLOBAL & TYPOGRAPHY --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Headings Upgrade */
+h1, h2, .display-6 {
+    color: #0c2d57;
+    font-weight: 800 !important;
+}
+h3{
+    color: #d1d5da;
+    font-weight: 700 !important;
+}
+
+h6.text-warning {
+    font-size: 1.1rem !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+}
+
+.header-line {
+    width: 80px;
+    height: 5px;
+    background: #fcb900;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+/* --- 2. HERO SECTION & CTA --- */
+.carousel-item {
+    height: 90vh;
+    transition: transform 1.2s ease-in-out, opacity 1s ease-in-out !important;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    margin-bottom: 35px;
+}
+
+/* Prominent CTA Button */
+.hero-content .btn-warning {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px !important;
+    box-shadow: 0 10px 30px rgba(252, 185, 0, 0.4) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- 3. SERVICES & IMAGES --- */
+.service-box-premium {
+    background: #fff;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    height: 100%;
+}
+
+.service-img-wrapper {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+}
+
+.service-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Optimization: Ensures image fills space without stretching */
+    transition: transform 0.8s ease;
+}
+
+.service-box-premium:hover .service-img-wrapper img {
+    transform: scale(1.15) rotate(1deg);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    margin: -35px auto 15px;
+    background: #fcb900;
+    color: #0c2d57;
+    position: relative;
+    z-index: 10;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- 4. PRICING & PLANS --- */
+.pricing-card {
+    transition: 0.4s ease;
+    border-radius: 20px !important;
+}
+
+.pricing-card.featured {
+    transform: scale(1.05);
+    border: 3px solid #fcb900 !important;
+    box-shadow: 0 20px 40px rgba(12, 45, 87, 0.15) !important;
+}
+
+.price-tag {
+    font-size: 3rem;
+    color: #0c2d57;
+}
+
+/* --- 5. CONTACT & FORM --- */
+.contact-info-card {
+    background: linear-gradient(135deg, #0c2d57 0%, #06142e 100%);
+    border-radius: 20px !important;
+    padding: 45px !important;
+}
+
+.custom-input {
+    border: 1px solid #eee !important;
+    background: #f8f9fa !important;
+    padding: 15px !important;
+    border-radius: 12px !important;
+}
+
+.custom-input:focus {
+    background: #fff !important;
+    border-color: #fcb900 !important;
+    box-shadow: 0 5px 15px rgba(252, 185, 0, 0.1) !important;
+}
+
+/* --- 6. PROFESSIONAL FOOTER --- */
+.footer-section {
+    background: #06142e !important;
+    color: white;
+    padding: 80px 0 30px;
+}
+
+.footer-links a {
+    color: #cbd5e0 !important;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+    color: #fcb900 !important;
+    transform: translateX(5px);
+}
+
+.social-circle {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.3s;
+}
+
+.social-circle:hover {
+    background: #fcb900;
+    color: #0c2d57;
+    transform: translateY(-5px);
+}
+
+/* --- 7. MOBILE RESPONSIVENESS & ALIGNMENT --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .header-line {
+        margin: 0 auto 30px; /* Force center on mobile */
+    }
+
+    .text-md-start {
+        text-align: center !important; /* Mobile par text center ho jaye */
+    }
+
+    .pricing-card.featured {
+        transform: scale(1); /* Mobile par scaling hatana behtar hai */
+        margin: 20px 0;
+    }
+
+    .contact-info-card {
+        padding: 30px !important;
+    }
+}
+
+/* 🔷 WHATSAPP BUTTON WITH PULSE EFFECT */
+.whatsapp {
+    position: fixed;
+    bottom: 90px; 
+    right: 25px;
+    background-color: #25D366;
+    color: white !important;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Pulsing Circle Animation */
+.whatsapp::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #25D366;
+    border-radius: 50%;
+    z-index: -1;
+    animation: whatsapp-pulse 2s infinite;
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+    background-color: #128C7E; /* Darker green on hover */
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* Tooltip (Optional: Jab mouse le jayein to 'Chat with us' likha aaye) */
+.whatsapp:hover::after {
+    content: "Chat with us";
+    position: absolute;
+    right: 75px;
+    background: #333;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fcb900;
+    border: none;
+}
+/* --- Overlapping Images Logic --- */
+.about-img-container {
+    position: relative;
+    padding-top: 60px; /* Space for the top overlapping image */
+    padding-left: 50px; /* Space for the left overlapping image */
+}
+
+/* Bari Main Image Styling */
+.about-img-main {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-img-main img {
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+/* Choti Image (Overlapping Box) */
+.about-img-small {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%; /* Aap isay adjust kar sakte hain */
+    z-index: 5; /* Isay main image ke oopar lane ke liye */
+    background: #fff;
+    padding: 10px; /* White border effect jo image mein hai */
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.about-img-small img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Hover Effects */
+.about-img-container:hover .about-img-main img {
+    transform: scale(1.05);
+}
+
+.about-img-container:hover .about-img-small {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
+/* Icon Box for Phone Number */
+.icon-box-small {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #fcb900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 991px) {
+    .about-img-container {
+        padding-top: 40px;
+        padding-left: 30px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+/* --- Service Card Hover --- */
+.service-box-premium {
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+}
+
+.service-box-premium:hover {
+    transform: translateY(-12px); /* Card oopar uthega */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Image Zoom Effect */
+.service-img-wrapper img {
+    transition: transform 0.7s ease;
+}
+
+.service-box-premium:hover .service-img-wrapper img {
+    transform: scale(1.1) rotate(1deg); /* Image zoom aur halki tilt hogi */
+}
+
+/* Icon Animation */
+.icon-circle {
+    transition: all 0.5s ease;
+}
+
+.service-box-premium:hover .icon-circle {
+    background: #0c2d57 !important; /* Blue color change */
+    color: #fcb900 !important;   /* Yellow icon change */
+    transform: rotateY(180deg);  /* Icon flip karega */
+}
+/* --- Blue & Yellow Pricing Theme --- */
+
+/* Featured Card Background (Deep Blue) */
+.bg-blue-theme {
+    background: linear-gradient(135deg, #0c2d57 0%, #06142e 100%) !important;
+}
+
+/* Pricing Card Featured Border */
+.pricing-card.featured {
+    border: 3px solid #fcb900 !important;
+    transform: scale(1.05);
+}
+
+/* Custom Blue Outline Button for Basic Plan */
+.custom-blue-btn {
+    border: 2px solid #0c2d57 !important;
+    color: #0c2d57 !important;
+    transition: 0.3s;
+}
+
+.custom-blue-btn:hover {
+    background: #0c2d57 !important;
+    color: #fcb900 !important;
+}
+
+/* Pricing Tag Color */
+.price-tag {
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+/* Label Styling */
+.popular-label {
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    background: #fcb900;
+    color: #0c2d57;
+    padding: 5px 20px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Hover Effect for Pricing Cards */
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(12, 45, 87, 0.1) !important;
+}
+/* 🔷 PROFESSIONAL SOCIAL BUTTONS */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    background: #f8f9fa; /* Light Gray Background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #0c2d57; /* Aapka theme blue */
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #eee;
+}
+
+/* Hover Effect: Common */
+.social-btn:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: white !important;
+}
+
+/* Brand Specific Colors on Hover */
+.social-btn.facebook:hover {
+    background-color: #1877F2;
+    border-color: #1877F2;
+    box-shadow: 0 10px 20px rgba(24, 119, 242, 0.3);
+}
+
+.social-btn.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-color: transparent;
+    box-shadow: 0 10px 20px rgba(214, 36, 159, 0.3);
+}
+
+.social-btn.youtube:hover {
+    background-color: #FF0000;
+    border-color: #FF0000;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+}
+
+/* --- 🔷 PROFESSIONAL NAVBAR STYLES --- */
+
+.navbar {
+    padding: 15px 0;
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+/* Logo Styling */
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: #fcb900;
+    color: #0c2d57;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+/* Nav Links Styling */
+.navbar-nav .nav-link {
+    color: #0c2d57 !important;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin: 0 12px;
+    position: relative;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+/* Animated Underline Effect */
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fcb900;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fcb900 !important;
+}
+
+/* Navbar CTA Button */
+.nav-btn {
+    box-shadow: 0 4px 15px rgba(252, 185, 0, 0.3);
+    border: none;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    background: #0c2d57 !important;
+    color: #fcb900 !important;
+    box-shadow: 0 8px 20px rgba(12, 45, 87, 0.2);
+}
+
+/* Sticky Navbar Effect (Jab scroll karein) */
+.navbar.scrolled {
+    padding: 8px 0;
+    background: #fff !important;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1) !important;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #fff;
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .nav-btn {
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
